@@ -6,22 +6,22 @@ public class Main {
 
 	public static void main(String[] args) {
 		Scanner scanner=new Scanner(System.in);
-		System.out.print("Asal olup olmadığını kontrol etmek istediğiniz sayıyı giriniz: ");
+		System.out.print("Asal olup olmadÄ±ÄŸÄ±nÄ± kontrol etmek istediÄŸiniz sayÄ±yÄ± giriniz: ");
 		int num=scanner.nextInt();
-		System.out.println(asal(num));
-		if(asal(num)==true) {
-			System.out.println(num+" sayısı asaldır.");
+		System.out.println(isPrime(num));
+		if(isPrime(num)==true) {
+			System.out.println(num+" sayÄ±sÄ± asaldÄ±r.");
 		}else {
-			System.out.println(num+" sayısı asal değildir.");
+			System.out.println(num+" sayÄ±sÄ± asal deÄŸildir.");
 		}
 	}
-	static boolean asal(int num) {
+	static boolean isPrime(int num) {
 		
 		int control=1;
 		for(int i=2;i<num;i++) {
 			if(num%i==0) {
 				control++;
-				asal(num-1);
+				isPrime(num-1);
 				if(control>1)
 					return false;
 			}
